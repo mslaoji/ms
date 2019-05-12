@@ -1,25 +1,19 @@
 // type 类型判断
-/**
- *
- * @param {Object} opts
- * @param {String} opts.appId  支付宝的appId
- * @param {String} opts.notifyUrl  支付宝服务器主动通知商户服务器里指定的页面http/https路径
- * @param {String} opts.rsaPrivate  商户私钥pem文件路径
- * @param {String} opts.rsaPublic  支付宝公钥pem文件路径
- * @param {String} opts.signType   签名方式, 'RSA' or 'RSA2'
- * @param {Boolean} [opts.sandbox] 是否是沙盒环境
- * @constructor
- */
 
 class ISTYPE {
 /**
 * @constructor
 */
     constructor(){}
+ /**
+ * @param {String} opts
+ */
     isString (o) { //是否字符串
         return Object.prototype.toString.call(o).slice(8, -1) === 'String'
     }
-
+ /**
+ * @param {Number} opts
+ */
     isNumber (o) { //是否数字
         return Object.prototype.toString.call(o).slice(8, -1) === 'Number'
     }
