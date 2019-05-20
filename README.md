@@ -11,7 +11,8 @@ node.js
 
 javaScript
 ==========
-- 非常使用的js帧动画的类(https://github.com/mslaoji/ms/tree/master/js-animation/fps-animation)
+- js帧动画的类(https://github.com/mslaoji/ms/tree/master/js-animation/fps-animation)
+- 常用js的封装(https://github.com/mslaoji/ms/blob/master/javascript%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/)
 
 ## Limitations
 - alipay、imgupload只适用于node服务环境中的使用
