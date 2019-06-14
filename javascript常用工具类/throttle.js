@@ -24,8 +24,8 @@ function debounce(func, delay) {
 
 function throttle(func, delay) {
  var timeout
- var start = new Date;
- var threshhold = threshhold || 160
+ var start = new Date();
+ var threshhold = delay || 160
  return function () {
 
  var context = this, args = arguments, curr = new Date() - 0
