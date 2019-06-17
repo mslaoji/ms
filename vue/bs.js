@@ -1,4 +1,4 @@
-Class EventBus{
+class EventBus{
     constructor(){
         this.events = {}
     }
@@ -11,17 +11,20 @@ Class EventBus{
             this.events[key] = []
         }
         this.events[key].push({
-            handler:cb,
+            handler:fn,
             isKeep:flag
         })
     }
     off(key, fn){
+        if(!key){
+            this.events = {}
+        }
         if(this.events[key]){
-            !cb && delete this.events[key]
+            !fn && delete this.events[key] return;
         }
         let offIndex = -1;
         for(let i = 0; i<this.events[key].length; i++){
-            if(this.events[key][i].handler === cb){
+            if(this.events[key][i].handler === fn){
                 offIndex === i;
             }
         }
@@ -31,12 +34,11 @@ Class EventBus{
     }
     emit(key, value){
         let args = [].slice.call(arguments, 1);
-        const self = this;
         for(let i=0; i<this.events[key].length; i++){
             if(this.events[key][i].handler){
                 this.events[key][i].handler.apply(this, args);
-                if(!this.events[key][i].isKeep){
-                    self.off(key, this.events[key][i].handler)
+                if(this.events[key][i].isKeep){
+                    this.off(key)
                 }
             }
         }
