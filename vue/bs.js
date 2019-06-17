@@ -19,7 +19,7 @@ class EventBus{
         if(!key){
             this.events = {}
         }
-        if(this.events[key]){
+        if(this.events[key] && !fn){
             !fn && delete this.events[key] return;
         }
         let offIndex = -1;
