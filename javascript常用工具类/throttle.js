@@ -32,11 +32,11 @@ function throttle(func, delay) {
  
  clearTimeout(timeout)
  if(curr - start >= threshhold){ 
-     fn.apply(context, args)
+     func.apply(context, args)
      start = curr
  }else{
      timeout = setTimeout(function(){
-        fn.apply(context, args) 
+        func.apply(context, args) 
      }, threshhold);
     }
   }
