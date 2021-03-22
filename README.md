@@ -16,3 +16,6 @@ javaScript
 
 ## Limitations
 - alipay、imgupload只适用于node服务环境中的使用
+
+## 移动端console.log
+- eruda.js
